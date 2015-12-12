@@ -20,9 +20,8 @@ def image():
 		key.set_contents_from_string(data)
 		key.make_public()
 		return jsonify({"status" : "success"}), 201
-	except Exception, exception:
-		print exception
-		return jsonify({"status" : "error", "message" : exception}), 500
+	except Exception as exception:
+		return jsonify({"status" : "error", "message" : str(exception)}), 500
 
 if __name__ == "__main__":
     application.run()
