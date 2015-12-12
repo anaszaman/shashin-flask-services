@@ -13,7 +13,7 @@ def image():
 		data = request.form["data"]
 		connection = boto.connect_s3()
 		bucket_name = "shashin-test"
-		bucket = connection.get_bucket(bucket_name)
+		bucket = connection.get_bucket(bucket_name, validate = False)
 		key = Key(bucket)
 		guid = uuid.uuid4()
 		key.key = guid
