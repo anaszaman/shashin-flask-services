@@ -22,7 +22,7 @@ def image():
 		return jsonify({"status" : "success"}), 201
 	except Exception, exception:
 		print exception
-		return jsonify({"status" : "error"}), 500
+		return jsonify({"status" : "error", "message" : exception}), 500
 
 if __name__ == "__main__":
     application.run()
