@@ -10,6 +10,7 @@ application = Flask(__name__)
 @application.route("/image/", methods = ["POST"])
 def image():
 	try:
+		print request.form
 		data = request.form["data"]
 		connection = boto.connect_s3()
 		bucket_name = "shashin-test"
