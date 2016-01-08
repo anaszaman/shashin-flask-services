@@ -20,7 +20,7 @@ def image():
 		key.key = guid
 		key.set_contents_from_string(data)
 		key.make_public()
-		return jsonify({"status" : "success"}), 201
+		return jsonify({"status" : "success", "guid" : guid}), 201
 	except Exception as exception:
 		print request.headers
 		print str(exception)
