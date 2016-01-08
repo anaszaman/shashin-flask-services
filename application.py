@@ -21,6 +21,7 @@ def image():
 		key.make_public()
 		return jsonify({"status" : "success"}), 201
 	except Exception as exception:
+		print request
 		print str(exception)
 		return jsonify({"status" : "error", "message" : str(exception)}), 500
 
