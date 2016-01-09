@@ -4,4 +4,4 @@ POC RESTful service for storing mobile images using Flask and DynamoDB
 # Setup and Deployment
 
 # Dependencies
-Flask, Boto, UUID
+Flask, Boto, UUID, Pillow
